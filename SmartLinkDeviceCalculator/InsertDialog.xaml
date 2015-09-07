@@ -1,0 +1,41 @@
+﻿<Window x:Class="SmartLinkDeviceCalculator.InsertDialog"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SmartLinkDeviceCalculator"
+             mc:Ignorable="d" 
+             Title="自定义添加模块" Icon="icon.ico" WindowStartupLocation="CenterScreen" WindowStyle="ToolWindow" Height="200" Width="300">
+    <Grid Margin="5">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <Label Width="110" FontSize="15" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="45,10,120,13" >插入位置:</Label>
+            <ComboBox Name="comboOfPosition" Height="25" Margin="167,10,55,13">
+            </ComboBox>
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <Label Width="110" FontSize="15" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="45,10,120,13">插入数量:</Label>
+            <ComboBox Name="comboOfCount" Height="25" Margin="167,10,55,14"/>
+        </Grid>
+
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button Name="add" Content="添加" FontSize="20" Grid.Column="0" Width="90" Height="40" Click="add_Click"></Button>
+            <Button Name="cancel" Content="取消" FontSize="20" Grid.Column="1" Width="90" Height="40" Click="cancel_Click"></Button>
+        </Grid>
+
+    </Grid>
+    <!--
+    在X到X+1之间
+    插入Y个Code模块
+    -->
+</Window>
