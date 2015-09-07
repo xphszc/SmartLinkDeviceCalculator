@@ -22,7 +22,7 @@ namespace SmartLinkDeviceCalculator
         public PowerLabel()
         {
             InitializeComponent();
-            this.power.Background = Brushes.Green;
+            this.power.Background = new LinearGradientBrush(Colors.Red, Colors.Green,2);
         }
     }
 }

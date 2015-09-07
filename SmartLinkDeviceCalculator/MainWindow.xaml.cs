@@ -459,7 +459,6 @@ namespace SmartLinkDeviceCalculator
                     PL.power.Content = power;
                     if (power<0)
                     {
-                        PL.power.Background = Brushes.Red;
                         PL.power.Content = string.Format("{0}  (该供电区域功耗已超标 ! )",power);
                     }
                     powerPanel.Children.Add(PL);
